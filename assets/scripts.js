@@ -1,26 +1,59 @@
-// $(document).ready(function(){
+$(document).ready(function(){
  
-var clickedBtn = document.querySelectorAll("#saveBtn");
-
+var clickedBtn = document.querySelector("#svBtn");
+var inputBox = document.querySelectorAll(".description")
 // var clickedBtn = buttons;
 // console.log("clickedbtn " + clickedBtn)
 // console.log("c button len :" + clickedBtn.length)
 
-for (var i = 0; i < clickedBtn.length; i++) {
+// for (var i = 0; i < clickedBtn.length; i++) {
 
   clickedBtn.addEventListener("click", function(event) {
       var element = event.target;
-   
-      if (element.matches("button") === true) {
-          var index = element.setAttribute("saveEvent", i);
+            
+    if (element != event.currentTarget) {
+          var clickedItem = element.id;
+        console.log("clicked item " + clickedItem)
 
-console.log("index is " + index)
+var n = parseInt(clickedItem)
+console.log("n " + n)
+ 
+        contentq = inputBox[n].value;
+
+
+        content = element.parentNode.parentNode.querySelector(".description").value
+
+        // var nameText = content.trim();
+
+        
+        // localStorage.setItem("evValue", content)
+   
+    
+        // console.log("name " + nameText)
+
+        console.log("content " + content)
+        console.log("contentq " + contentq)
+
+
+//     var contentID = element.parentNode.parentNode.querySelector(".description").id
+    
+//     console.log("content " + content)
+//     console.log(" id " + contentID)
+
+//         localStorage.setItem("getvalue",  content);
+
+
+
+
+
+
       }
+
 
   }
 
-  )}
-
+  )
+})
 // }
 
 
