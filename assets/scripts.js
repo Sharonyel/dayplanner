@@ -1,132 +1,72 @@
-$(document).ready(function(){
- 
-var clickedBtn = document.querySelector("#svBtn");
-var inputBox = document.querySelectorAll(".description")
-// var clickedBtn = buttons;
-// console.log("clickedbtn " + clickedBtn)
-// console.log("c button len :" + clickedBtn.length)
+$(document).ready(function () {
 
-// for (var i = 0; i < clickedBtn.length; i++) {
+    var clickedBtn = document.querySelector("#svBtn");
+    var inputBox = document.querySelectorAll(".description")
+    var hourEvent = [];
+    var n = 0;
 
-  clickedBtn.addEventListener("click", function(event) {
-      var element = event.target;
-            
-    if (element != event.currentTarget) {
-          var clickedItem = element.id;
-        console.log("clicked item " + clickedItem)
+getActivities();
+    clickedBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        var element = event.target;
 
-var n = parseInt(clickedItem)
-console.log("n " + n)
- 
-        contentq = inputBox[n].value;
+        if (element.matches("button") === true) {
+            var clickedItem = element.id;
+            console.log("clicked item " + clickedItem)
+
+            getActivities();
 
 
-        content = element.parentNode.parentNode.querySelector(".description").value
+            n = parseInt(clickedItem)
 
-        // var nameText = content.trim();
+            hourEvent = inputBox[n].value;
+            console.log("event is " + hourEvent)
 
-        
-        // localStorage.setItem("evValue", content)
-   
-    
-        // console.log("name " + nameText)
+            // plannerOBJ.entry = n;
+            // plannerOBJ.activity = hourEvent;    
 
-        console.log("content " + content)
-        console.log("contentq " + contentq)
+            storeActivity();
+            getActivities()
+
+            // localStorage.setItem("plannerOBJ", JSON.stringify(plannerOBJ));
+
+        }
+        //   storeActivity();
+    }
+    )
+    function storeActivity() {
+
+        localStorage.setItem(n, JSON.stringify(hourEvent));
+        console.log("set item")
+    }
+
+    function getActivities() {
+
+        for (var i = 0; i < localStorage.length; i++) {
+            // alert("here")
+            var activities = JSON.parse(localStorage.getItem(hourEvent))
+            if (activities) {
+                
+                console.log("hourevent " + hourEvent)
+                var j = 0;
+                //  for (var i = 0; i < activities.length; i++) {
+
+                    // activities[0].value = j
+                    console.log("act j  " + j)
+                    // inputBox[j] = document.getElementById(j)
+
+                // }
+            }
+        }
 
 
-//     var contentID = element.parentNode.parentNode.querySelector(".description").id
-    
-//     console.log("content " + content)
-//     console.log(" id " + contentID)
+    }
+    function getrefresh() {
 
-//         localStorage.setItem("getvalue",  content);
-
-
-
+        // for (var j = 0; j < plannerOBJ.length; j++) {
+        //     plannerOBJ.entry = inputBox
+        // }
+    }
 
 
-
-      }
-
-
-  }
-
-  )
 })
-// }
-
-
-// }
-// ) 
-// var enterName = document.querySelector("description");
-// listenClick();
-
-
-// function listenClick() {
-
-// $(".saveBtn").on("click", function(event){
-//         var element = event.target;
-//         if (element.matches("button") === true) {  
-
-//     var content = element.parentNode.parentNode.querySelector(".description").value
-//     var contentID = element.parentNode.parentNode.querySelector(".description").id
-    
-//     console.log("content " + content)
-//     console.log(" id " + contentID)
-
-//         localStorage.setItem("getvalue",  content);
-
-
-//         // listenClick()
-
-//         // if (contentID == "nineA") {
-//         //     nineAm = content;
-//         //     localStorage.setItem("9am", nineAm);
-//         //     console.log("nine am " + nineAm);
-//         // }
-// }
-    
-// })
-// }  
- 
-    
-
-
-
-
-    // alert("clicked " + );
-
-    // var inPut = this(".description").val()
-
-    // var nameInput = $(this).siblings(".description").value;
-
-
-
-
-
-
-    
-
-    //     var userEvent = $(".description").val();
-    //     var nineValue = $("#9Event")
-    //     localStorage.setItem("getvalue", userEvent);
-
-    // console.log(userEvent);
-
-    // var allButtons = document.querySelectorAll('.saveBtn');
-    // console.log("Found", allButtons.length, "div which class starts with “button”.");
-    
-    // for (var i = 0; i < allButtons.length; i++) {
-    //   allButtons[i].addEventListener('click', function() {
-    //     var userEvent = $(".description").val();
-    //     var nineValue = $("#9Event")
-    //     localStorage.setItem("getvalue", userEvent);
-   
-    //     console.log("You clicked:", this.innerHTML);
-
-    //     console.log("You clicked:", allButtons[i]);
-    //   });
-    // }
-// 
-//
