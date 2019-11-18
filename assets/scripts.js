@@ -1,4 +1,3 @@
-$(document).ready(function () {
 // Variables
     var clickedBtn = document.querySelector("#svBtn");
     var inputBox = document.querySelectorAll(".description")
@@ -34,7 +33,3 @@ $(document).ready(function () {
         inputBox[i].value = storedActivities
         }
     }
-    // function clearStorage(){
-
-    // }
-})

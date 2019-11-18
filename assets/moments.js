@@ -1,17 +1,17 @@
 
-// document.querySelector("#currentDay")
-//     .innerHTML = moment().format("MMMM Do YYYY");
 var update = function () {
 
+// get the current day
     document.querySelector("#currentDay")
     .innerHTML = moment().format("MMMM Do YYYY");
-
+// get the current time
     document.querySelector("#currentTime")
         .innerHTML = moment().format("h:mm");
         
 var currHour = moment().hour();
 var hrblock = document.querySelectorAll(".description");
 
+// checks the current hour to assign the class of past, present or future
     if (currHour == 9) {
         hrblock[0].className = "col-8 description present"
         for (i = 1; i < hrblock.length; i++) {
