@@ -23,7 +23,7 @@ Files
 Screenshots
 ---
 
-<img src="assets/images/SS2.png" width=300>    <img src="assets/images/SS1.png" width=300>  
+<img src="assets/images/SS2.png" width=300>    
 
 
 <img src="assets/images/SS3.png" width=300>  
