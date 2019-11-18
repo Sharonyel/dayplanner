@@ -5,24 +5,7 @@ var update = function () {
     document.querySelector("#currentDay")
         .innerHTML = moment().format("MMMM Do YYYY, h:mm");
         
-//    var checkTime = document.querySelectorAll("#hour");
-    var currHour = moment().hour();
-//     var hrblock = document.querySelectorAll(".description");
-// console.log(currHour)
-
-//    for (var j = 0; j < checkTime.length; j++){
-//         if (currHour == checkTime[j]) {
-//         hrblock[i].className = "present"
-//         } else {
-//             if (currHour >= checkTime[i]) {
-//                 hrblock[1].className = "future"
-//             }
-//         }
-
-
-
-//    }
-
+var currHour = moment().hour();
 var hrblock = document.querySelectorAll(".description");
 
     if (currHour == 9) {
@@ -78,7 +61,10 @@ var hrblock = document.querySelectorAll(".description");
     if (currHour == 17) {
         hrblock[8].className = "col-8 description present"
     }
-
+// clear calendar for the next day
+    if (currHour >= 18) {
+        localStorage.clear();
+    }
 }
 
 setInterval(update, 1000);
