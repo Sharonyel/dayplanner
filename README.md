@@ -19,12 +19,15 @@ Files
 * moments.js
 * scripts.js
 
-Code Examples
----
-
 
 Screenshots
 ---
+
+<img src="assets/images/ss1.png" width=300>  <img src="assets/images/ss2.png" width=300>  
+<img src="assets/images/ss3.png" width=300>  
+
+
+
 
 
 
