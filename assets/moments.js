@@ -1,9 +1,13 @@
 
-document.querySelector("#currentDay")
-    .innerHTML = moment().format("MMMM Do YYYY, h:mm");
+// document.querySelector("#currentDay")
+//     .innerHTML = moment().format("MMMM Do YYYY");
 var update = function () {
+
     document.querySelector("#currentDay")
-        .innerHTML = moment().format("MMMM Do YYYY, h:mm");
+    .innerHTML = moment().format("MMMM Do YYYY");
+
+    document.querySelector("#currentTime")
+        .innerHTML = moment().format("h:mm");
         
 var currHour = moment().hour();
 var hrblock = document.querySelectorAll(".description");
@@ -61,7 +65,7 @@ var hrblock = document.querySelectorAll(".description");
     if (currHour == 17) {
         hrblock[8].className = "col-8 description present"
     }
-// clear calendar for the next day
+// clear calendar after the 5pm hour for the next day
     if (currHour >= 18) {
         localStorage.clear();
     }
