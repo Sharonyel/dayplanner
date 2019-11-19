@@ -66,7 +66,7 @@ var hrblock = document.querySelectorAll(".description");
         hrblock[8].className = "col-8 description present"
     }
 // clear calendar after the 5pm hour for the next day
-    if (currHour >= 18) {
+    if (currHour >= 24) {
         localStorage.clear();
     }
 }
