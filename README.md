@@ -23,7 +23,10 @@ Files
 Screenshots
 ---
 
-<img src="assets/images/SS2.png" width=700>    
+<img src="assets/images/SS2.png" width=700>   
+
+continued..
+
 <img src="assets/images/SS3.png" width=700>
 
  Project source can be downloaded from (https://sharonyel.github.io/dayplanner/) 
